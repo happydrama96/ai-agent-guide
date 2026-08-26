@@ -43,9 +43,6 @@ const config: Config = {
           showLastUpdateTime: hasGitHistory,
           showLastUpdateAuthor: false,
           exclude: ['_templates/**'],
-          editUrl: repositorySlug
-            ? `https://github.com/${repositorySlug}/edit/main/`
-            : undefined,
         },
         blog: false,
         theme: {
@@ -68,9 +65,6 @@ const config: Config = {
       items: [
         {type: 'docSidebar', sidebarId: 'guideSidebar', position: 'left', label: '문서'},
         {to: '/updates/latest', position: 'left', label: '업데이트'},
-        ...(repositorySlug
-          ? [{href: `https://github.com/${repositorySlug}`, label: 'GitHub', position: 'right' as const}]
-          : []),
       ],
     },
     footer: {
