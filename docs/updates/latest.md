@@ -10,6 +10,18 @@ sidebar_position: 1
 
 기능 출시 소식을 전부 옮기지 않습니다. 설치, 권한, 프로젝트 연결, 명령어처럼 **기존 사용법을 바꾸는 내용**만 반영합니다.
 
+## 2026-09-28 · Claude Code 플러그인·Skills 재검증
+
+| 제품·주제 | 확인한 변화 | 이 가이드에 반영한 것 |
+| --- | --- | --- |
+| Claude Code 공식 플러그인 | 현재 배포 기준은 `anthropics/claude-plugins-official` 마켓플레이스이며 `플러그인@마켓플레이스` 형식으로 설치 | 예전 `anthropics/claude-code/plugins` 목록을 설치 기준으로 단정하지 않고 공식 마켓플레이스를 우선하도록 문서화 |
+| Claude Code Skills | 개인, 프로젝트, 하위 디렉터리, 플러그인 Skill의 로딩 범위가 다르고 cloud session은 로컬 개인 경로를 읽지 않음 | 로컬·팀·cloud 범위별 경로와 공유 방식 추가 |
+| `security-guidance` | 패턴 경고 외에 작업 종료 시 diff 리뷰와 커밋 시 agent 리뷰를 수행하며 관련 코드를 설정된 모델 endpoint로 전송 | 단순 로컬 hook으로 소개하지 않고 데이터 전송·비용·비활성화 항목 추가 |
+| Superpowers | Claude Code 공식 마켓플레이스에서 설치할 수 있고, Skills가 설계·TDD·디버깅·검증·브랜치 마무리 순서를 자동으로 적용 | 이름만 나열하지 않고 언제 쓰며 기존 workflow와 어떻게 충돌하는지 정리 |
+| Claude Code 최신 변경 기록 | `prompt-audit`은 오래된 모델용 프롬프트 패턴을 점검하고, 플러그인 검증·상세·제거 명령의 오류 처리가 개선됨 | 이번 검증에서 공식 마켓플레이스 이름과 플러그인 로딩 범위를 다시 확인 |
+
+새 정리는 [Claude Code 개발 스킬 지도](../plugins/claude-code-dev-skills.md)에서 확인할 수 있습니다. 공식 플러그인을 전부 설치하라는 뜻이 아니라 기존 팀 절차에서 빈 단계만 고르기 위한 참조표입니다.
+
 ## 2026-08-26 · 사이트 첫 공개 기준선
 
 | 제품·표준 | 확인한 변화 | 이 가이드에 반영한 것 |
@@ -36,8 +48,10 @@ MCP 변경의 원문 요약은 [2026-07-28 사양 발표](https://blog.modelcont
 - 회사 워크스페이스에서 ChatGPT 연결 기능의 관리자 제어 경로
 - Cursor CLI의 Beta 상태와 Windows 네이티브 지원 범위
 - Copilot CLI와 IDE 사이의 지침·권한 동작 차이
+- Claude Code 공식 마켓플레이스의 플러그인 이름·기본 권한 변경
+- Superpowers와 Claude Code 기본 workflow의 중복 범위
 
 <div className="guide-meta">
-**최종 확인일:** 2026-08-26  
-**기준 버전:** MCP 2026-07-28 · 각 벤더 공식 변경 기록 최신판
+**최종 확인일:** 2026-09-28<br />
+**기준 버전:** MCP 2026-07-28 · Claude Code 공식 Plugins·Skills 문서 · 각 벤더 공식 변경 기록 최신판
 </div>

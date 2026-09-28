@@ -26,7 +26,14 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: '5. 플러그인',
-      items: ['plugins/index', 'plugins/claude-code', 'plugins/cursor', 'plugins/chatgpt', 'plugins/copilot'],
+      items: [
+        'plugins/index',
+        'plugins/claude-code',
+        'plugins/claude-code-dev-skills',
+        'plugins/cursor',
+        'plugins/chatgpt',
+        'plugins/copilot',
+      ],
     },
     {
       type: 'category',
