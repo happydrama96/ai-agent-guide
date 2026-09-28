@@ -10,6 +10,18 @@ sidebar_position: 1
 
 기능 출시 소식을 전부 옮기지 않습니다. 설치, 권한, 프로젝트 연결, 명령어처럼 **기존 사용법을 바꾸는 내용**만 반영합니다.
 
+## 2026-09-28 · Codex 플러그인·Skills 구조 정리
+
+| 제품·주제 | 확인한 변화 | 이 가이드에 반영한 것 |
+| --- | --- | --- |
+| OpenAI Plugins | 플러그인은 Skills, 앱 연결, MCP 서버, agents, commands, hooks를 선택적으로 묶는 현재 배포 단위 | 내장 Skill, 절차형 플러그인, 연결형 플러그인을 구분해 설명 |
+| `openai/skills` | 저장소가 deprecated 상태이며 새 예제는 `openai/plugins`를 사용하라고 안내 | 이전 카탈로그 Skill을 현재 추천 목록과 분리하고 기존 환경 참고용으로 표시 |
+| Superpowers | Codex 공식 디렉터리에서 설계·TDD·디버깅·검증·병렬 작업 Skills를 묶어 제공 | GitHub, Codex Security와 함께 개발 기본 조합으로 정리 |
+| 연결형 플러그인 | GitHub, Figma, Vercel, Supabase 등은 계정 연결과 원격 데이터 접근이 필요 | `🔗` 표시와 권한·데이터 전송·외부 상태 변경 주의사항 추가 |
+| `migrate-to-codex` | 공개 Plugins Directory에서 정확히 일치하는 항목을 확인하지 못함 | 추측해 설치법을 싣지 않고 공식 Claude Code 마이그레이션 가이드만 연결 |
+
+자세한 선택 기준과 설치 후 확인 방법은 [Codex 개발 스킬·플러그인 지도](../plugins/codex-dev-skills.md)에서 확인할 수 있습니다.
+
 ## 2026-09-28 · Claude Code 플러그인·Skills 재검증
 
 | 제품·주제 | 확인한 변화 | 이 가이드에 반영한 것 |

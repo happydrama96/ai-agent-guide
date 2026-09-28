@@ -32,6 +32,7 @@ const sidebars: SidebarsConfig = {
         'plugins/claude-code-dev-skills',
         'plugins/cursor',
         'plugins/chatgpt',
+        'plugins/codex-dev-skills',
         'plugins/copilot',
       ],
     },
