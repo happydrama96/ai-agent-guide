@@ -42,7 +42,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           showLastUpdateTime: hasGitHistory,
           showLastUpdateAuthor: false,
-          exclude: ['_templates/**'],
+          exclude: ['_templates/**', 'about/**'],
         },
         blog: false,
         theme: {
@@ -75,13 +75,6 @@ const config: Config = {
           items: [
             {label: '5분 첫 실행', to: '/getting-started/first-run'},
             {label: '오류 해결', to: '/integrations/troubleshooting'},
-          ],
-        },
-        {
-          title: '원칙',
-          items: [
-            {label: '외부 분석 도구 없음', to: '/about/site-policy'},
-            {label: '콘텐츠 관리 규칙', to: '/about/content-guide'},
           ],
         },
       ],

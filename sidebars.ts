@@ -46,12 +46,6 @@ const sidebars: SidebarsConfig = {
       label: '7. 업데이트 소식',
       items: ['updates/latest'],
     },
-    {
-      type: 'category',
-      label: '사이트 안내',
-      collapsed: true,
-      items: ['about/site-policy', 'about/content-guide'],
-    },
   ],
 };
 
