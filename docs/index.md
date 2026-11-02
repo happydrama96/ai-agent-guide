@@ -7,7 +7,7 @@ sidebar_position: 0
 
 # AI Agent 활용 가이드
 
-> 공식 문서: [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) · [Cursor](https://docs.cursor.com/) · [ChatGPT](https://learn.chatgpt.com/docs/quickstart) · [GitHub Copilot](https://docs.github.com/en/copilot)
+> 공식 문서: [Claude Code](https://code.claude.com/docs/en/overview) · [Cursor](https://cursor.com/docs) · [ChatGPT](https://learn.chatgpt.com/docs/quickstart) · [GitHub Copilot](https://docs.github.com/en/copilot)
 
 <div className="hero-panel">
   <h2>설치는 짧게, 검증은 꼼꼼하게</h2>
@@ -35,6 +35,6 @@ sidebar_position: 0
 - 로그인, DB, 백엔드 API, 방문자 분석을 사용하지 않습니다.
 
 <div className="guide-meta">
-**최종 확인일:** 2026-08-26  
+**최종 확인일:** 2026-11-02<br />
 **기준 버전:** Docusaurus 3.10.2 · 각 벤더 공식 문서 최신판
 </div>

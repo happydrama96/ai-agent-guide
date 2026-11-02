@@ -19,14 +19,6 @@ Docusaurus와 Markdown으로 만든 정적 문서 사이트입니다. 로그인,
 
 `docusaurus.config.ts`가 `GITHUB_REPOSITORY`를 읽어 사용자/조직 페이지와 프로젝트 페이지의 URL을 자동 계산합니다. 커스텀 도메인은 `SITE_URL`, `BASE_URL` 환경 변수로 덮어쓸 수 있습니다.
 
-## 정기 자동 업데이트
-
-`.github/workflows/update-docs.yml`이 매주 월요일 09:00(KST)에 Claude로 벤더 공식 변경 기록을 확인하고, 사용법이 바뀐 내용이 있으면 문서를 고쳐 `docs/auto-update` 브랜치로 PR을 엽니다. PR을 확인하고 머지하면 배포 워크플로가 사이트를 갱신합니다. 반영할 변화가 없으면 PR을 만들지 않습니다.
-
-1. **Settings → Secrets and variables → Actions → New repository secret**에 `ANTHROPIC_API_KEY`를 추가합니다. Claude 구독을 쓰려면 로컬에서 `claude setup-token`으로 만든 토큰을 `CLAUDE_CODE_OAUTH_TOKEN`으로 넣고, 워크플로의 인증 줄을 바꿉니다.
-2. **Settings → Actions → General → Workflow permissions**에서 **Allow GitHub Actions to create and approve pull requests**를 켭니다.
-3. **Actions → Weekly docs update → Run workflow**로 한 번 수동 실행해 동작을 확인합니다.
-
 ## 콘텐츠 작성
 
 - `docs/_templates/`에서 섹션별 템플릿을 복사합니다. 이 폴더는 빌드 대상에서 제외됩니다.

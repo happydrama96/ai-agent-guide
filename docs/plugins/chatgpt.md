@@ -13,19 +13,21 @@ sidebar_position: 4
 
 | 이름 | 한 줄 설명 | 난이도 | 추천도 | 활성도 | 최종 확인 |
 | --- | --- | --- | --- | --- | --- |
-| Build Web Apps | 웹 앱 구현·검토·배포 준비 절차를 하나의 개발 Skill 묶음으로 제공한다. | 쉬움 | 높음 | 활발 | 2026-08-26 |
-| Figma | 선택한 디자인의 구조, 에셋, variant를 코드 구현 컨텍스트로 가져온다. | 보통 | 높음 | 활발 | 2026-08-26 |
-| Vercel | 웹 앱의 preview 배포, 상태 확인, 빌드 로그 점검을 연결한다. | 보통 | 높음 | 활발 | 2026-08-26 |
+| Build Web Apps | 웹 앱 구현·검토·배포 준비 절차를 하나의 개발 Skill 묶음으로 제공한다. | 쉬움 | 높음 | 유지보수만 | 2026-11-02 |
+| Figma | 선택한 디자인의 구조, 에셋, variant를 코드 구현 컨텍스트로 가져온다. | 보통 | 높음 | 활발 | 2026-11-02 |
+| Vercel | 웹 앱의 preview 배포, 상태 확인, 빌드 로그 점검을 연결한다. | 보통 | 높음 | 활발 | 2026-11-02 |
 
-이 페이지는 ChatGPT의 공용 Plugins Directory에서 설치하고 Chat 또는 Work에서 쓰는 흐름과, ChatGPT 데스크톱 앱의 Codex에서 쓰는 개발 흐름을 함께 다룹니다. IDE 확장에서는 ChatGPT 플러그인을 지원하지 않습니다. 별도 MCP 서버 설정은 다루지 않으며 연결이 필요한 플러그인은 설치 과정의 공식 connector 인증만 사용합니다.
+이 페이지는 ChatGPT의 공용 Plugins Directory에서 설치하고 Chat 또는 Work에서 쓰는 흐름과, ChatGPT 데스크톱 앱의 Codex에서 쓰는 개발 흐름을 함께 다룹니다. Codex CLI에서는 `/plugins`로 플러그인 브라우저를 열 수 있지만, IDE 확장에서는 플러그인을 지원하지 않습니다. 상세 화면에 **Desktop only**로 표시된 플러그인은 웹에서 찾을 수만 있고 설치·사용은 데스크톱 앱에서 해야 합니다. 별도 MCP 서버 설정은 다루지 않으며 연결이 필요한 플러그인은 설치 과정에서 안내되는 공식 연결 인증만 사용합니다.
+
+회사 워크스페이스에서는 관리자가 플러그인을 미리 설치하거나 막아 둘 수 있습니다. 관리자는 **Admin console → Plugins**에서 플러그인별 설치 정책(사용 가능, 워크스페이스에 설치, 역할별 설정, 비활성화)과 앱 접근·도구 허용을 정하고, **Permissions & roles**에서 구성원의 플러그인 사용·업로드·공유 권한을 정합니다. 플러그인이 설치되어 있어도 그 앱이나 외부 데이터 접근 권한이 자동으로 생기지는 않습니다. 자세한 내용은 [플러그인 관리자 제어](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors)를 확인하세요.
 
 ## Build Web Apps
 
 > **메타**  
 > 최초 공개 : 2026-03  
 > 개발 주체 : 공식  
-> 활성도 : 활발 — 마지막 플러그인 활동 2026-06-08  
-> 최종 확인 : 2026-08-26
+> 활성도 : 유지보수만 — 마지막 플러그인 활동 2026-06-08  
+> 최종 확인 : 2026-11-02
 
 React 기반 웹 앱 구현, UI 검토, 브라우저 확인, 배포 준비에 필요한 지침과 관련 Skills를 묶은 OpenAI 공식 플러그인입니다.
 
@@ -70,11 +72,11 @@ React 기반 웹 앱 구현, UI 검토, 브라우저 확인, 배포 준비에 �
 > 최초 공개 : 2026-03  
 > 개발 주체 : 서드파티(기업)  
 > 활성도 : 활발 — 마지막 플러그인 활동 2026-08-26  
-> 최종 확인 : 2026-08-26
+> 최종 확인 : 2026-11-02
 
 Figma의 선택한 node와 frame에서 구조화된 디자인 정보, 에셋, variant를 읽어 현재 저장소의 컴포넌트와 코드로 옮기게 하는 플러그인입니다.
 
-> 공식 자료: [OpenAI Figma-to-code 가이드](https://learn.chatgpt.com/use-cases/figma-designs-to-code) · [공식 패키지 저장소](https://github.com/openai/plugins/tree/main/plugins/figma) · [ChatGPT 플러그인 권한](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors)
+> 공식 자료: [OpenAI Figma-to-code 가이드](https://learn.chatgpt.com/use-cases/figma-designs-to-code) · [공식 패키지 저장소](https://github.com/openai/plugins/tree/main/plugins/figma) · [플러그인 관리자 제어](https://learn.chatgpt.com/docs/enterprise/apps-and-connectors)
 
 ### 어떤 문제를 푸는가 / 이럴 때는 불필요
 
@@ -115,7 +117,7 @@ Figma의 선택한 node와 frame에서 구조화된 디자인 정보, 에셋, va
 > 최초 공개 : 2026-03  
 > 개발 주체 : 서드파티(기업)  
 > 활성도 : 활발 — 마지막 플러그인 활동 2026-08-26  
-> 최종 확인 : 2026-08-26
+> 최종 확인 : 2026-11-02
 
 Vercel 프로젝트에 preview를 배포하고 배포 상태, 빌드 로그, 프로젝트 설정을 확인하도록 연결하는 플러그인입니다.
 
@@ -155,6 +157,6 @@ Vercel을 사용하지 않는 프로젝트, CI가 이미 preview 배포와 URL �
 - **비용:** 빌드, 함수 실행, 대역폭 등은 연결한 Vercel 계정의 플랜과 사용량 정책을 따릅니다.
 
 <div className="guide-meta">
-**최종 확인일:** 2026-08-26  
-**기준 버전:** OpenAI 공식 Plugins Directory · ChatGPT 공식 활용 가이드 최신판
+**최종 확인일:** 2026-11-02<br />
+**기준 버전:** ChatGPT Plugins·Plugin controls 문서 2026-11-02 기준 · `openai/plugins` 기본 브랜치 · ChatGPT 공식 활용 가이드 최신판
 </div>

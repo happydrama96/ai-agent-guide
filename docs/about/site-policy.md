@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # 사이트 운영 원칙
 
-> 공식 문서: [Docusaurus 정적 사이트 빌드](https://docusaurus.io/docs/installation) · [GitHub Pages 배포](https://docusaurus.io/docs/deployment/github-pages)
+> 공식 문서: [Docusaurus 정적 사이트 빌드](https://docusaurus.io/docs/installation) · [GitHub Pages 배포](https://docusaurus.io/docs/deployment#deploying-to-github-pages)
 
 이 사이트는 내가 쓰고, 필요한 사람이 읽는 공개 정적 문서입니다.
 

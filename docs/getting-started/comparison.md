@@ -6,13 +6,13 @@ sidebar_position: 1
 
 # 에이전트 비교표
 
-> 공식 문서: [Claude Code 개요](https://docs.anthropic.com/en/docs/claude-code/overview) · [Cursor 개요](https://docs.cursor.com/workflow) · [ChatGPT 시작하기](https://learn.chatgpt.com/docs/quickstart) · [GitHub Copilot 개요](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
+> 공식 문서: [Claude Code 개요](https://code.claude.com/docs/en/overview) · [Cursor 개요](https://cursor.com/docs/agent/overview) · [ChatGPT 시작하기](https://learn.chatgpt.com/docs/quickstart) · [GitHub Copilot 개요](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
 
 기능 수보다 **어디서 일하는지**와 **어떤 변경을 맡길지**로 고르면 덜 후회합니다.
 
 | 에이전트 | 작업 표면 | 가장 잘 맞는 일 | 프로젝트 컨텍스트 | 먼저 볼 위험 |
 | --- | --- | --- | --- | --- |
-| Claude Code | 터미널 | 큰 코드베이스 탐색, 여러 파일 수정, 테스트 반복 | 현재 폴더와 `CLAUDE.md` | 셸 명령과 넓은 파일 권한 |
+| Claude Code | 터미널 | 큰 코드베이스 탐색, 여러 파일 수정, 테스트 반복 | 현재 폴더와 `CLAUDE.md`(없으면 `AGENTS.md`) | 셸 명령과 넓은 파일 권한 |
 | Cursor | 코드 편집기 + 선택형 CLI | 코드 작성 중 빠른 수정, 자동완성, 대화형 구현 | 열린 폴더, 인덱스, `.cursor/rules` | 인덱싱 범위와 자동 실행 |
 | ChatGPT | 웹·데스크톱 | 조사, 문서·표 작성, 파일 묶음 분석, 일반 업무 | 프로젝트의 파일과 지침 | 업로드 파일의 민감정보, 사실 검증 |
 | GitHub Copilot | IDE·GitHub·CLI | 편집 흐름 안의 제안, 저장소 질문, PR 보조 | 워크스페이스와 `.github/copilot-instructions.md` | 제안 코드의 라이선스·보안·정확성 |
@@ -39,6 +39,6 @@ sidebar_position: 1
 5. 연결을 끊고 토큰을 폐기하는 절차가 있는가?
 
 <div className="guide-meta">
-**최종 확인일:** 2026-08-26  
+**최종 확인일:** 2026-11-02<br />
 **기준 버전:** 각 벤더 공식 문서 최신판(자동 업데이트형 제품)
 </div>

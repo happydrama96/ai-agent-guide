@@ -7,16 +7,16 @@ sidebar_position: 6
 # Codex 개발 스킬·플러그인 지도
 
 :::warning 설치 전 확인
-여기는 참고용입니다. 설치 전 [OpenAI 플러그인 공식 문서](https://developers.openai.com/plugins), [공식 Plugins 저장소](https://github.com/openai/plugins), 각 플러그인의 권한 안내를 우선 확인하세요.
+여기는 참고용입니다. 설치 전 [플러그인 사용 문서](https://learn.chatgpt.com/docs/plugins), [플러그인 제작 문서](https://developers.openai.com/plugins), [공식 Plugins 저장소](https://github.com/openai/plugins), 각 플러그인의 권한 안내를 우선 확인하세요.
 :::
 
 | 이름 | 한 줄 설명 | 난이도 | 추천도 | 활성도 | 최종 확인 |
 | --- | --- | --- | --- | --- | --- |
-| Superpowers | 설계부터 TDD·디버깅·검증까지 개발 절차를 일관되게 적용한다. | 보통 | 높음 | 활발 | 2026-09-28 |
-| GitHub 🔗 | 저장소·PR·이슈·CI를 읽고 권한 범위 안에서 변경 사항을 반영한다. | 보통 | 높음 | 활발 | 2026-09-28 |
-| Codex Security 🔗 | 저장소와 diff의 보안 스캔, 조사, 분류, 수정 검증 절차를 제공한다. | 보통 | 높음 | 활발 | 2026-09-28 |
-| Build Web Apps | 프론트엔드 구현과 React·shadcn·결제·DB 관련 개발 지침을 묶어 제공한다. | 쉬움 | 조건부 | 활발 | 2026-09-28 |
-| OpenAI Developers 🔗 | OpenAI API·Agents SDK·ChatGPT Apps 개발과 API 키 작업을 지원한다. | 보통 | 조건부 | 활발 | 2026-09-28 |
+| Superpowers | 설계부터 TDD·디버깅·검증까지 개발 절차를 일관되게 적용한다. | 보통 | 높음 | 활발 | 2026-11-02 |
+| GitHub 🔗 | 저장소·PR·이슈·CI를 읽고 권한 범위 안에서 변경 사항을 반영한다. | 보통 | 높음 | 활발 | 2026-11-02 |
+| Codex Security 🔗 | 저장소와 diff의 보안 스캔, 조사, 분류, 수정 검증 절차를 제공한다. | 보통 | 높음 | 활발 | 2026-11-02 |
+| Build Web Apps | 프론트엔드 구현과 React·shadcn·결제·DB 관련 개발 지침을 묶어 제공한다. | 쉬움 | 조건부 | 유지보수만 | 2026-11-02 |
+| OpenAI Developers 🔗 | OpenAI API·Agents SDK·ChatGPT Apps 개발과 API 키 작업을 지원한다. | 보통 | 조건부 | 활발 | 2026-11-02 |
 
 이 페이지는 전수 목록이 아니라 **개발 업무의 시작점을 고르는 지도**입니다. `🔗`는 계정 연결이나 원격 도구가 포함되어 로컬 코드 밖으로 데이터가 전달될 수 있음을 뜻합니다. 실제 전송 범위와 쓰기 권한은 설치 화면과 서비스별 권한 정책에서 다시 확인해야 합니다.
 
@@ -31,11 +31,11 @@ sidebar_position: 6
 | 연결형 플러그인 🔗 | Skills와 앱 또는 MCP 연결 | GitHub, Figma, Vercel처럼 실제 외부 데이터 조회·변경이 필요할 때 |
 | 복합 플러그인 | Skills, 연결, agents, commands 등을 함께 포함 | 하나의 업무 흐름을 여러 기능으로 묶어 적용할 때 |
 
-`openai/skills`에 남은 예전 설치 예시는 기존 환경을 이해하는 참고 자료로만 보고, 새로 찾을 때는 Codex의 `/plugins`와 [Plugins Directory](https://developers.openai.com/plugins)를 먼저 사용합니다.
+`openai/skills`에 남은 예전 설치 예시는 기존 환경을 이해하는 참고 자료로만 보고, 새로 찾을 때는 Codex CLI의 `/plugins` 또는 ChatGPT 데스크톱 앱의 **Plugins** 탭을 먼저 사용합니다. 설치한 플러그인의 Skills와 도구는 새 세션부터 쓸 수 있습니다. IDE 확장은 플러그인을 지원하지 않습니다. API 키로 로그인한 Codex는 별도 marketplace를 쓰므로 이 페이지의 항목이 일부 보이지 않을 수 있습니다. 회사 워크스페이스에서는 관리자가 **Admin console → Plugins**에서 플러그인을 미리 설치하거나 막을 수 있고, **Add → Import marketplace**로 팀용 GitHub marketplace를 가져올 수 있습니다.
 
 ## 기본 내장 Skills
 
-> 공식 문서: [Skills 만들기](https://developers.openai.com/plugins/build/skills) · [플러그인 만들기](https://developers.openai.com/plugins/build/plugins)
+> 공식 문서: [Skills와 플러그인](https://learn.chatgpt.com/docs/skills-and-plugins) · [Skills 만들기](https://developers.openai.com/plugins/build/skills) · [플러그인 만들기](https://developers.openai.com/plugins/build/plugins)
 
 | Skill | 하는 일 | 언제 쓰나 |
 | --- | --- | --- |
@@ -51,10 +51,10 @@ sidebar_position: 6
 | --- | --- | --- |
 | `$skill-creator <만들 Skill 설명>` | Skill 제작 절차를 시작한다. | 반복 업무를 새 Skill로 만들 때 |
 | `$skill-installer <Skill 이름 또는 저장소 경로>` | Skill 설치 절차를 시작한다. | 기존 Skill을 현재 Codex 환경에 추가할 때 |
-| `@plugin-creator <만들 플러그인 설명>` | 플러그인 구조와 manifest 생성을 시작한다. | 배포 가능한 플러그인을 만들 때 |
+| `$plugin-creator <만들 플러그인 설명>` | 플러그인 구조와 manifest 생성을 시작한다. | 배포 가능한 플러그인을 만들 때 |
 | `/plugins` | 공식 플러그인 검색·설치 화면을 연다. | 새 플러그인을 찾거나 설치 상태를 확인할 때 |
 
-내장 여부는 Codex 배포 형태와 관리 정책에 따라 달라질 수 있습니다. 명령이 인식되지 않으면 현재 설치된 Skills 목록과 조직 관리자의 허용 정책부터 확인합니다.
+Codex에서는 Skill을 `$이름`으로, ChatGPT의 Chat·Work에서는 `@이름`으로 명시해 부릅니다. 내장 여부는 Codex 배포 형태와 관리 정책에 따라 달라질 수 있습니다. 명령이 인식되지 않으면 현재 설치된 Skills 목록과 조직 관리자의 허용 정책부터 확인합니다.
 
 ## Superpowers
 
@@ -62,8 +62,8 @@ sidebar_position: 6
 
 > - 최초 공개 : 확인 필요
 > - 개발 주체 : 서드파티(기업)
-> - 활성도 : 활발 — 2026-09 저장소 활동 확인
-> - 최종 확인 : 2026-09-28
+> - 활성도 : 활발 — 공식 저장소 마지막 반영 2026-08-26
+> - 최종 확인 : 2026-11-02
 
 ### 한 줄 설명
 
@@ -77,10 +77,10 @@ sidebar_position: 6
 
 | 명령어 | 하는 일 | 언제 쓰나 |
 | --- | --- | --- |
-| `/plugins` | 플러그인 검색 화면을 연다. | Codex 앱이나 CLI에서 설치를 시작할 때 |
+| `/plugins` | 플러그인 검색 화면을 연다. | Codex CLI에서 설치를 시작할 때 |
 | `superpowers` | 검색어로 Superpowers를 찾는다. | `/plugins` 화면에서 공식 등록 항목을 고를 때 |
 
-검색 결과에서 `Superpowers`를 선택하고 `Install Plugin`을 실행합니다. 설치 경로가 여러 개 보이면 OpenAI 공식 디렉터리 항목을 우선합니다.
+CLI에서는 검색 결과에서 `Superpowers`를 선택하고 `Install Plugin`을 실행합니다. ChatGPT 데스크톱 앱에서는 **사이드바 → Plugins → Coding → Superpowers 옆 `+`** 경로로 설치합니다. 설치 경로가 여러 개 보이면 OpenAI 공식 디렉터리 항목을 우선합니다.
 
 ### 설치 후 확인 방법
 
@@ -104,12 +104,12 @@ Skills는 상황을 감지해 자동 적용될 수 있으므로, 실제 설치�
 
 ## GitHub 🔗
 
-> 공식 자료: [OpenAI Plugins 저장소](https://github.com/openai/plugins/tree/main/plugins/github) · [Plugins Directory](https://developers.openai.com/plugins)
+> 공식 자료: [OpenAI Plugins 저장소](https://github.com/openai/plugins/tree/main/plugins/github) · [플러그인 사용 문서](https://learn.chatgpt.com/docs/plugins)
 
 > - 최초 공개 : 확인 필요
 > - 개발 주체 : 공식
-> - 활성도 : 활발 — 2026-09 공식 디렉터리 등록 확인
-> - 최종 확인 : 2026-09-28
+> - 활성도 : 활발 — 공식 저장소 마지막 반영 2026-09-28
+> - 최종 확인 : 2026-11-02
 
 ### 한 줄 설명
 
@@ -148,12 +148,12 @@ Codex에서 GitHub 저장소, PR, 이슈, CI 상태를 조회하고 허용된 �
 
 ## Codex Security 🔗
 
-> 공식 자료: [Codex Security 문서](https://developers.openai.com/codex/security) · [OpenAI Plugins 저장소](https://github.com/openai/plugins/tree/main/plugins/codex-security)
+> 공식 자료: [Codex Security 문서](https://learn.chatgpt.com/docs/security) · [OpenAI Plugins 저장소](https://github.com/openai/plugins/tree/main/plugins/codex-security)
 
 > - 최초 공개 : 확인 필요
 > - 개발 주체 : 공식
-> - 활성도 : 활발 — 2026-09 공식 저장소 활동 확인
-> - 최종 확인 : 2026-09-28
+> - 활성도 : 활발 — 공식 저장소 마지막 반영 2026-10-08
+> - 최종 확인 : 2026-11-02
 
 ### 한 줄 설명
 
@@ -170,7 +170,9 @@ Codex에서 GitHub 저장소, PR, 이슈, CI 상태를 조회하고 허용된 �
 | `/plugins` | 플러그인 검색 화면을 연다. | Codex Security를 설치할 때 |
 | `codex security` | 공식 보안 플러그인을 검색한다. | 검색 결과에서 정확한 항목을 고를 때 |
 
-`Codex Security`를 설치하고, 연결 또는 추가 권한 안내가 나오면 스캔 대상과 데이터 처리 정책을 확인한 뒤 진행합니다.
+ChatGPT 데스크톱 앱에서는 **Codex 선택 → Codex Security 설치 → 사이드바 Security** 순서로 엽니다. 저장한 스캔과 finding은 **Security** 화면에서 검토합니다. 설치한 플러그인은 Codex CLI에서도 쓸 수 있습니다. 연결 또는 추가 권한 안내가 나오면 스캔 대상과 데이터 처리 정책을 확인한 뒤 진행합니다.
+
+플러그인 외에도 GitHub 저장소를 연결해 쓰는 Cloud 스캔(research preview), 터미널·CI용 CLI, SDK 방식이 공식 문서에 따로 안내되어 있습니다. 로컬 저장소의 첫 스캔은 플러그인으로 시작하라는 것이 공식 권장입니다.
 
 ### 설치 후 확인 방법
 
@@ -218,7 +220,14 @@ Codex에서 GitHub 저장소, PR, 이슈, CI 상태를 조회하고 허용된 �
 | [`security-best-practices`](https://github.com/openai/skills/tree/main/skills/.curated/security-best-practices) | 언어·프레임워크 보안 리뷰 | Codex Security와 기존 Skill의 범위를 구분 |
 | [`jupyter-notebook`](https://github.com/openai/skills/tree/main/skills/.curated/jupyter-notebook) | 노트북 생성·편집 | 기존 설치 참고용. 현재 디렉터리에서 대체 항목 확인 |
 
-`migrate-to-codex`는 2026-09-28 확인 시 공개 Plugins Directory에서 정확히 일치하는 항목을 확인하지 못해 이번 문서에서는 제외했습니다. Claude Code 자산 이전 자체는 [공식 마이그레이션 가이드](https://developers.openai.com/codex/migrate/claude-code)로 확인하고, 같은 이름의 플러그인이 검색될 때만 설치 대상으로 봅니다.
+`migrate-to-codex`는 2026-11-02 확인 때도 공식 `openai/plugins` 저장소에서 같은 이름의 항목을 찾지 못해 이번 문서에서는 제외했습니다. Claude Code·Cursor의 지침, Skills, 플러그인, MCP 설정, hooks, slash command, subagent를 옮길 때는 공식 가져오기 기능을 씁니다. 기존 에이전트 설정은 바뀌거나 지워지지 않습니다.
+
+| 명령어 | 하는 일 | 언제 쓰나 |
+| --- | --- | --- |
+| `/import` | Codex CLI 로컬 세션에서 Claude Code·Cursor 설정과 최근 대화를 가져온다. | 터미널 중심으로 Codex로 옮길 때 |
+| `설정 → Import` | ChatGPT 데스크톱 앱에서 Claude Code·Claude Cowork·Cursor 설정을 가져온다. | 데스크톱 앱으로 옮길 때 |
+
+자세한 범위는 [다른 에이전트에서 가져오기](https://learn.chatgpt.com/docs/import)를 확인합니다. CLI의 `/import`는 작업 실행 중이나 원격 세션에서는 쓸 수 없습니다.
 
 ## 처음 고르는 조합
 
@@ -233,6 +242,6 @@ Codex에서 GitHub 저장소, PR, 이슈, CI 상태를 조회하고 허용된 �
 처음부터 여러 연결형 플러그인을 모두 켜기보다, `Superpowers`로 작업 절차를 잡고 GitHub나 현재 스택 플러그인을 하나씩 추가하는 편이 권한과 실패 원인을 파악하기 쉽습니다.
 
 <div className="guide-meta">
-**최종 확인일:** 2026-09-28<br />
-**기준 버전:** OpenAI Plugins Directory·`openai/plugins` 기본 브랜치·`openai/skills` deprecated 안내 기준
+**최종 확인일:** 2026-11-02<br />
+**기준 버전:** Codex CLI 0.166.0 · ChatGPT Learn Plugins·Skills 문서 2026-11-02 기준 · `openai/plugins` 기본 브랜치 · `openai/skills` deprecated 안내 기준
 </div>

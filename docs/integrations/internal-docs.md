@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # 사내 문서 연결
 
-> 공식 문서: [Claude Code 데이터 사용](https://docs.anthropic.com/en/docs/claude-code/data-usage) · [Cursor 개인정보와 보안](https://docs.cursor.com/account/privacy) · [ChatGPT 권한](https://learn.chatgpt.com/docs/permissions) · [GitHub Copilot 데이터 보호](https://docs.github.com/en/copilot/responsible-use/copilot-trust-center)
+> 공식 문서: [Claude Code 데이터 사용](https://code.claude.com/docs/en/data-usage) · [Cursor 개인정보와 데이터](https://cursor.com/help/security-and-privacy/privacy) · [ChatGPT 권한](https://learn.chatgpt.com/docs/permissions) · [GitHub Copilot Trust Center](https://copilot.github.trust.page/)
 
 연결의 목표는 “문서를 많이 넣는 것”이 아니라 **누가 볼 수 있는 최신 원문을, 필요한 작업에만 제공하는 것**입니다.
 
@@ -22,6 +22,19 @@ sidebar_position: 2
 ## 권장 구조
 
 공개 가능한 사용 지침은 저장소의 `docs/`나 에이전트 지침 파일에 둡니다. 제한 문서는 원래 문서 시스템에 남기고, 커넥터 또는 MCP가 현재 사용자의 권한으로만 검색하게 합니다. 비밀값과 원문 전체를 프롬프트 템플릿에 복사하지 않습니다.
+
+## 관리자 제어 위치
+
+회사 워크스페이스에서 커넥터나 MCP를 허용하기 전에 아래 위치에서 조직 정책을 먼저 확인합니다. 요금제와 배포 시점에 따라 메뉴가 보이지 않을 수 있으므로 공식 문서를 기준으로 합니다.
+
+| 제품 | 관리자 제어 | 확인할 것 |
+| --- | --- | --- |
+| Claude Code | 조직 설정의 `managedMcpServers`(v2.1.259 이상) | 조직 지정 서버가 사용자·프로젝트 설정보다 우선하는지 |
+| Cursor | **Team Settings → MCP Configuration**의 MCP Allowlist, 대시보드의 Privacy Mode 강제 | 승인된 서버·도구만 허용되는지 |
+| ChatGPT | **Workspace settings → Permissions & roles**의 플러그인 권한(사용, 업로드, MCP 플러그인 생성, 공유) | MCP 플러그인 생성·업로드 권한이 기본값(꺼짐)인지 |
+| GitHub Copilot | "MCP servers in Copilot" 정책(Business·Enterprise 대상, 기본 꺼짐), 조직 레지스트리 URL과 허용 목록 | 허용 목록에 있는 서버만 실행되는지 |
+
+출처: [Claude Code MCP](https://code.claude.com/docs/en/mcp) · [Cursor MCP](https://cursor.com/docs/mcp) · [ChatGPT MCP](https://learn.chatgpt.com/docs/extend/mcp) · [Copilot MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp) · [Copilot CLI MCP](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers). 서버별 연결 방법은 [MCP 서버 연결](./mcp.md)을 봅니다.
 
 ## 연결 전 분류
 
@@ -61,6 +74,6 @@ sidebar_position: 2
 제품의 **설정 → 연결/앱 → 해당 서비스 → 연결 해제** 후 원본 시스템의 **계정 → 연결된 앱 → 접근 취소**도 수행합니다. MCP라면 클라이언트 설정 제거, 서버 계정 비활성, 발급 토큰 폐기, 로그의 비밀값 노출 여부 확인까지 한 묶음으로 처리합니다.
 
 <div className="guide-meta">
-**최종 확인일:** 2026-08-26  
-**기준 버전:** 각 벤더 보안·권한 공식 문서 최신판
+**최종 확인일:** 2026-11-02<br />
+**기준 버전:** 각 벤더 보안·권한·MCP 관리 공식 문서 2026-11-02 확인본 · MCP 사양 2026-07-28
 </div>

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # 직군별 실전 시나리오
 
-> 공식 문서: [ChatGPT·Codex 활용 사례](https://learn.chatgpt.com/use-cases) · [Claude Code 일반 워크플로](https://docs.anthropic.com/en/docs/claude-code/common-workflows) · [Cursor 가이드](https://docs.cursor.com/en/guides) · [GitHub Copilot 프롬프트 안내](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+> 공식 문서: [ChatGPT·Codex 활용 사례](https://learn.chatgpt.com/use-cases) · [Claude Code 일반 워크플로](https://code.claude.com/docs/en/common-workflows) · [Cursor 문서](https://cursor.com/docs) · [GitHub Copilot 프롬프트 안내](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
 
 좋은 시나리오는 “AI가 무엇을 하느냐”보다 **입력, 산출물, 완료 조건, 사람의 승인 지점**이 선명합니다.
 
@@ -96,6 +96,6 @@ sidebar_position: 1
 - 작업이 끝난 뒤 불필요한 파일·연결·토큰을 정리했다.
 
 <div className="guide-meta">
-**최종 확인일:** 2026-08-26  
+**최종 확인일:** 2026-11-02<br />
 **기준 버전:** 각 벤더 공식 활용 사례·프롬프트 문서 최신판
 </div>

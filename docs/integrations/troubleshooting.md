@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # 오류 해결
 
-> 공식 문서: [Claude Code 문제 해결](https://docs.anthropic.com/en/docs/claude-code/troubleshooting) · [Cursor 문제 해결](https://docs.cursor.com/en/troubleshooting/troubleshooting-guide) · [ChatGPT 문제 해결](https://learn.chatgpt.com/docs/troubleshooting) · [GitHub Copilot 문제 해결](https://docs.github.com/en/copilot/troubleshooting-github-copilot)
+> 공식 문서: [Claude Code 문제 해결](https://code.claude.com/docs/en/troubleshooting) · [Cursor 문제 해결](https://cursor.com/help/troubleshooting/install-issues) · [ChatGPT 문제 해결](https://learn.chatgpt.com/docs/reference/troubleshooting) · [GitHub Copilot 문제 해결](https://docs.github.com/en/copilot/troubleshooting-github-copilot)
 
 재설치부터 하지 마세요. 아래 순서로 **서비스 → 인증 → 범위 → 권한 → 네트워크 → 클라이언트**를 분리하면 원인을 보존한 채 빨리 찾을 수 있습니다.
 
@@ -31,6 +31,7 @@ sidebar_position: 3
 | 명령 실행 거부 | 승인 정책, 샌드박스, 조직 제한 | 필요한 한 명령만 허용하고 우회 옵션 사용 금지 |
 | MCP `401` | 로그인 만료, 잘못된 대상 토큰 | 연결 메뉴에서 재인증하고 토큰 발급 대상을 확인 |
 | MCP `403` | scope·원본 시스템 권한 부족 | 원본 권한 확인 후 필요한 scope만 추가 |
+| MCP 버전 불일치 | 클라이언트·서버 프로토콜 리비전 차이(2026-07-28 무상태 전환) | 서버 SDK 버전 확인, Claude Code는 `MCP_PROTOCOL_NEGOTIATION=legacy`로 시험 |
 | TLS·인증서 오류 | 회사 프록시와 사설 CA | 보안팀의 CA 번들과 공식 프록시 설정 사용 |
 | 응답은 오지만 엉뚱함 | 컨텍스트 오염, 근거 부족 | 새 대화에서 파일·범위·완료 조건을 명시 |
 
@@ -40,10 +41,13 @@ sidebar_position: 3
 | --- | --- | --- |
 | `claude doctor` | Claude Code 설치·환경 진단 | 경로, 업데이트, 런타임 문제 확인 |
 | `/status` | Claude Code 세션 상태 확인 | 계정·모델·연결이 의심될 때 |
-| `cursor-agent status` | Cursor CLI 인증·엔드포인트 확인 | CLI가 응답하지 않을 때 |
+| `agent status` | Cursor CLI 인증 상태 확인 | CLI가 응답하지 않을 때 |
 | `cursor --disable-extensions` | 확장을 끈 Cursor 실행 | 편집기 확장 충돌을 분리할 때 |
-| `/diagnostics` | Copilot CLI 진단 정보 표시 | 지원 요청 전 환경을 수집할 때 |
+| `/diagnose` | Copilot CLI 세션 로그 분석 | 지원 요청 전 환경을 수집할 때 |
 | `/mcp list` | Copilot CLI MCP 상태 목록 | 연결 서버 문제를 분리할 때 |
+| `claude mcp list` | Claude Code MCP 서버 목록과 상태 확인 | 연결 서버 문제를 분리할 때 |
+| `codex mcp list` | Codex MCP 서버 목록 확인 | Codex·ChatGPT 데스크톱의 서버 문제를 분리할 때 |
+| `/doctor` | Claude Code 세션 안에서 설치·설정·`CLAUDE.md` 점검 후 수정 제안 | 세션 중 설정 문제가 의심될 때 |
 
 ## 좋은 오류 보고서
 
@@ -71,6 +75,6 @@ sidebar_position: 3
 - 조직 정책으로 막힌 기능을 개인 토큰으로 우회하기
 
 <div className="guide-meta">
-**최종 확인일:** 2026-08-26  
+**최종 확인일:** 2026-11-02<br />
 **기준 버전:** 각 벤더 문제 해결 공식 문서 최신판
 </div>

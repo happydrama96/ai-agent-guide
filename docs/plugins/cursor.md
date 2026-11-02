@@ -13,9 +13,9 @@ sidebar_position: 3
 
 | 이름 | 한 줄 설명 | 난이도 | 추천도 | 활성도 | 최종 확인 |
 | --- | --- | --- | --- | --- | --- |
-| Cursor Team Kit | CI, 리뷰, 검증, 배포 준비에 필요한 반복 작업을 Skills로 묶는다. | 쉬움 | 높음 | 활발 | 2026-08-26 |
-| Orchestrate | 큰 작업을 Cursor Cloud Agent 여러 개로 나누고 결과를 합친다. | 보통 | 조건부 | 활발 | 2026-08-26 |
-| Continual Learning | 대화에서 반복되는 선호와 프로젝트 사실을 골라 `AGENTS.md`에 반영한다. | 쉬움 | 조건부 | 유지보수만 | 2026-08-26 |
+| Cursor Team Kit | CI, 리뷰, 검증, 배포 준비에 필요한 반복 작업을 Skills로 묶는다. | 쉬움 | 높음 | 활발 | 2026-11-02 |
+| Orchestrate | 큰 작업을 Cursor Cloud Agent 여러 개로 나누고 결과를 합친다. | 보통 | 조건부 | 활발 | 2026-11-02 |
+| Continual Learning | 대화에서 반복되는 선호와 프로젝트 사실을 골라 `AGENTS.md`에 반영한다. | 쉬움 | 조건부 | 유지보수만 | 2026-11-02 |
 
 세 후보는 Cursor가 직접 만들고 검증한 마켓플레이스 플러그인입니다. 별도 MCP 서버를 설치하지 않아도 되지만, Orchestrate는 Cursor 클라우드와 API 키를 사용하고 Continual Learning은 hook으로 파일을 자동 갱신합니다.
 
@@ -25,7 +25,7 @@ sidebar_position: 3
 > 최초 공개 : 2026-02  
 > 개발 주체 : 공식  
 > 활성도 : 활발 — 마지막 플러그인 활동 2026-08-11  
-> 최종 확인 : 2026-08-26
+> 최종 확인 : 2026-11-02
 
 Cursor 내부 개발 흐름에서 쓰는 CI 확인, 코드 리뷰, 테스트, PR 정리, 로컬 UI·CLI 검증 절차를 재사용 가능한 Skills와 subagents로 묶은 플러그인입니다.
 
@@ -39,7 +39,7 @@ Cursor 내부 개발 흐름에서 쓰는 CI 확인, 코드 리뷰, 테스트, PR
 
 ### 설치
 
-Cursor Agent 대화창에서 공식 마켓플레이스 명령을 실행합니다. 또는 **Customize → Plugins → Cursor Team Kit → Install → 사용자 또는 프로젝트 범위** 경로를 사용합니다.
+Cursor Agent 대화창에서 공식 마켓플레이스 명령을 실행합니다. 또는 사이드바 **Customize**의 마켓플레이스 패널에서 **Cursor Team Kit → Install → 사용자 또는 프로젝트 범위** 경로를 사용합니다. 마켓플레이스 플러그인은 편집기·웹·CLI에서 함께 동작합니다.
 
 | 명령어 | 하는 일 | 언제 쓰나 |
 | --- | --- | --- |
@@ -76,7 +76,7 @@ Cursor Agent 대화창에서 공식 마켓플레이스 명령을 실행합니다
 > 최초 공개 : 2026-05  
 > 개발 주체 : 공식  
 > 활성도 : 활발 — 마지막 플러그인 활동 2026-08-11  
-> 최종 확인 : 2026-08-26
+> 최종 확인 : 2026-11-02
 
 큰 목표를 planner, worker, verifier가 맡을 하위 작업으로 나누고 Cursor Cloud Agent 실행 결과를 Git과 로컬 인계 파일로 합치는 오케스트레이션 Skill입니다.
 
@@ -98,7 +98,7 @@ Cursor Agent 대화창에서 설치한 뒤 공식 저장소의 런타임 요구�
 | `cd skills/orchestrate/scripts` | 설치된 플러그인의 실행 스크립트 경로로 이동 | 런타임 의존성을 준비할 때 |
 | `bun install` | Orchestrate 스크립트 의존성 설치 | 플러그인 설치 후 한 번 |
 
-API 키는 **Cursor Dashboard → Integrations → User API Keys**에서 발급하고 `CURSOR_API_KEY` 환경 변수로 주입합니다. 키 값을 명령 기록이나 저장소 설정 파일에 직접 적지 마세요.
+API 키는 **Cursor Dashboard → API Keys**에서 발급하고 `CURSOR_API_KEY` 환경 변수로 주입합니다. 키 값을 명령 기록이나 저장소 설정 파일에 직접 적지 마세요.
 
 ### 설치 후 확인 방법
 
@@ -129,11 +129,11 @@ API 키는 **Cursor Dashboard → Integrations → User API Keys**에서 발급�
 > 최초 공개 : 2026-02  
 > 개발 주체 : 공식  
 > 활성도 : 유지보수만 — 마지막 플러그인 활동 2026-03-13  
-> 최종 확인 : 2026-08-26
+> 최종 확인 : 2026-11-02
 
 대화 기록의 새 변화에서 지속할 만한 사용자 선호와 작업 공간 사실을 추출해 `AGENTS.md`의 짧은 항목으로 갱신하는 플러그인입니다.
 
-> 공식 자료: [마켓플레이스](https://cursor.com/marketplace/cursor/continual-learning) · [저장소·동작 방식](https://github.com/cursor/plugins/tree/main/continual-learning) · [Cursor hooks](https://cursor.com/docs/agent/hooks)
+> 공식 자료: [마켓플레이스](https://cursor.com/marketplace/cursor/continual-learning) · [저장소·동작 방식](https://github.com/cursor/plugins/tree/main/continual-learning) · [Cursor hooks](https://cursor.com/docs/hooks)
 
 ### 어떤 문제를 푸는가 / 이럴 때는 불필요
 
@@ -168,10 +168,10 @@ Cursor Agent 대화창에서 설치합니다. 자동 hook을 포함하므로 사
 - **권한:** stop hook과 subagent가 `AGENTS.md` 및 `.cursor/hooks/state/` 아래 상태 파일을 씁니다. 자동 변경을 바로 커밋하지 말고 diff를 검토하세요.
 - **데이터 범위:** 대화에서 추출한 선호와 프로젝트 사실이 저장소 파일에 남을 수 있습니다. 개인 정보, 고객명, 내부 URL이 생성되지 않았는지 확인하세요.
 - **공유:** `AGENTS.md`를 커밋하면 추출된 내용이 저장소 접근자에게 공유됩니다. 개인 선호와 팀 규칙을 구분하세요.
-- **활성도:** 마지막 개별 활동이 3개월을 넘었으므로 `유지보수만`으로 분류했습니다. Cursor 또는 hook 규격 변경 뒤에는 작은 저장소에서 먼저 재검증하세요.
+- **활성도:** 2026-09-08 커밋은 작성자 메타데이터만 바꿨고, 기능 변경은 2026-03-13이 마지막이므로 `유지보수만`으로 분류했습니다. Cursor 또는 hook 규격 변경 뒤에는 작은 저장소에서 먼저 재검증하세요.
 - **대체 가능성:** 명시적인 `AGENTS.md` 리뷰 절차가 있다면 자동 학습보다 사람이 작성한 규칙이 더 예측 가능합니다.
 
 <div className="guide-meta">
-**최종 확인일:** 2026-08-26  
+**최종 확인일:** 2026-11-02<br />
 **기준 버전:** Cursor 공식 Marketplace · cursor/plugins 기본 브랜치
 </div>

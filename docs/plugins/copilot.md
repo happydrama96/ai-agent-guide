@@ -13,11 +13,20 @@ sidebar_position: 5
 
 | 이름 | 한 줄 설명 | 난이도 | 추천도 | 활성도 | 최종 확인 |
 | --- | --- | --- | --- | --- | --- |
-| AI Team Orchestration | 계획·개발·QA 역할을 분리해 큰 작업을 단계별로 운영한다. | 쉬움 | 높음 | 활발 | 2026-08-26 |
-| Context Engineering | 작업에 필요한 파일과 의존성을 먼저 찾아 컨텍스트와 변경 순서를 정리한다. | 쉬움 | 높음 | 활발 | 2026-08-26 |
-| Doublecheck | AI 답변의 검증 가능한 주장을 추출하고 출처와 환각 위험을 점검한다. | 쉬움 | 높음 | 활발 | 2026-08-26 |
+| AI Team Orchestration | 계획·개발·QA 역할을 분리해 큰 작업을 단계별로 운영한다. | 쉬움 | 높음 | 활발 | 2026-11-02 |
+| Context Engineering | 작업에 필요한 파일과 의존성을 먼저 찾아 컨텍스트와 변경 순서를 정리한다. | 쉬움 | 높음 | 활발 | 2026-11-02 |
+| Doublecheck | AI 답변의 검증 가능한 주장을 추출하고 출처와 환각 위험을 점검한다. | 쉬움 | 높음 | 활발 | 2026-11-02 |
 
-세 후보는 GitHub가 기본 등록하는 `awesome-copilot` 커뮤니티 마켓플레이스에 있습니다. agents와 Skills로 구성되며 독립 MCP 서버 설치가 필요하지 않습니다.
+세 후보는 GitHub가 기본 등록하는 `awesome-copilot` 커뮤니티 마켓플레이스에 있습니다. agents와 Skills로 구성되며 독립 MCP 서버 설치가 필요하지 않습니다. 예전에 함께 기본 등록되던 `copilot-plugins`는 이제 기본 마켓플레이스가 아니므로 쓰려면 `copilot plugin marketplace add github/copilot-plugins`로 직접 추가합니다.
+
+| 명령어 | 하는 일 | 언제 쓰나 |
+| --- | --- | --- |
+| `copilot plugin update 이름` | 설치한 플러그인 업데이트(`--all`은 전체) | 마켓플레이스 내용이 바뀌었을 때 |
+| `copilot plugin disable 이름` | 지우지 않고 비활성화 | 충돌이나 오동작을 격리할 때 |
+| `copilot plugin uninstall 이름` | 플러그인 제거 | 더 이상 쓰지 않을 때 |
+| `/plugin` | 세션 안에서 플러그인 대시보드 열기 | CLI 대화 중 상태를 확인할 때 |
+
+저장소 유지관리자는 `.github/copilot/settings.json`의 `enabledPlugins`로 신뢰된 저장소의 기본 플러그인을 정할 수 있고, VS Code·Copilot CLI·Copilot 앱이 이를 따릅니다. 이 경우 `copilot plugin enable`/`disable`이 거부될 수 있으며, 조직 관리 설정의 필수·차단 플러그인이 저장소와 개인 설정보다 우선합니다. 팀에 배포하기 전에 [Copilot 플러그인 개념](https://docs.github.com/en/copilot/concepts/customizations/plugins)에서 정확한 설정 형식을 확인하세요.
 
 ## AI Team Orchestration
 
@@ -25,7 +34,7 @@ sidebar_position: 5
 > 최초 공개 : 2026-04  
 > 개발 주체 : 서드파티(개인)  
 > 활성도 : 활발 — 마지막 플러그인 활동 2026-08-06  
-> 최종 확인 : 2026-08-26
+> 최종 확인 : 2026-11-02
 
 Producer, Dev Team, QA 역할을 분리하고 가벼운 계획부터 독립 검증까지 작업 크기에 맞춰 적용하는 멀티 에이전트 플러그인입니다.
 
@@ -74,11 +83,11 @@ Producer, Dev Team, QA 역할을 분리하고 가벼운 계획부터 독립 검�
 > 최초 공개 : 2026-02  
 > 개발 주체 : 서드파티(개인)  
 > 활성도 : 활발 — 마지막 플러그인 활동 2026-08-06  
-> 최종 확인 : 2026-08-26
+> 최종 확인 : 2026-11-02
 
 작업에 관련된 파일, 의존성, 변경 순서, 되돌리기 지점을 구현 전에 정리하도록 돕는 context planning 플러그인입니다.
 
-> 공식 자료: [플러그인 저장소](https://github.com/github/awesome-copilot/tree/main/plugins/context-engineering) · [manifest](https://github.com/github/awesome-copilot/blob/main/plugins/context-engineering/plugin.json) · [GitHub Copilot Skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)
+> 공식 자료: [플러그인 저장소](https://github.com/github/awesome-copilot/tree/main/plugins/context-engineering) · [manifest](https://github.com/github/awesome-copilot/blob/main/plugins/context-engineering/plugin.json) · [GitHub Copilot Skills](https://docs.github.com/en/copilot/concepts/customizations/agent-skills)
 
 ### 어떤 문제를 푸는가 / 이럴 때는 불필요
 
@@ -121,7 +130,7 @@ Copilot이 일부 파일만 보고 다중 파일 변경을 시작해 호출 관�
 > 최초 공개 : 2026-03  
 > 개발 주체 : 서드파티(개인)  
 > 활성도 : 활발 — 마지막 플러그인 활동 2026-08-06  
-> 최종 확인 : 2026-08-26
+> 최종 확인 : 2026-11-02
 
 AI가 생성한 글에서 검증 가능한 주장을 추출하고 웹 출처 확인과 적대적 재검토를 거쳐 사람이 확인할 보고서를 만드는 플러그인입니다.
 
@@ -163,6 +172,6 @@ AI가 생성한 글에서 검증 가능한 주장을 추출하고 웹 출처 확
 - **권한:** 플러그인 자체는 agents와 Skills로 구성되지만 웹 검색 도구의 가용성과 정책은 현재 Copilot 환경을 따릅니다.
 
 <div className="guide-meta">
-**최종 확인일:** 2026-08-26  
-**기준 버전:** GitHub Copilot 공식 플러그인 문서 · awesome-copilot 기본 브랜치
+**최종 확인일:** 2026-11-02<br />
+**기준 버전:** Copilot CLI 1.0.105 · GitHub Copilot 공식 플러그인 문서 · awesome-copilot 기본 브랜치(플러그인 변경 2026-08-06)
 </div>

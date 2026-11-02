@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # 5분 첫 실행
 
-> 공식 문서: [Claude Code 빠른 시작](https://docs.anthropic.com/en/docs/claude-code/quickstart) · [Cursor 빠른 시작](https://docs.cursor.com/en/get-started/quickstart) · [ChatGPT 빠른 시작](https://learn.chatgpt.com/docs/quickstart) · [Copilot 빠른 시작](https://docs.github.com/en/copilot/get-started/quickstart)
+> 공식 문서: [Claude Code 빠른 시작](https://code.claude.com/docs/en/quickstart) · [Cursor 빠른 시작](https://cursor.com/docs/get-started/quickstart) · [ChatGPT 빠른 시작](https://learn.chatgpt.com/docs/quickstart) · [Copilot 빠른 시작](https://docs.github.com/en/copilot/get-started/quickstart)
 
 첫 작업은 코드를 쓰게 하지 말고 **작은 범위를 읽고 근거를 대게** 하세요. 에이전트가 무엇을 볼 수 있는지 확인하는 데 5분이면 충분합니다.
 
@@ -58,6 +58,6 @@ sidebar_position: 2
 하나라도 어긋나면 더 큰 권한을 주기 전에 [오류 해결](/integrations/troubleshooting)과 해당 제품의 셋업 문서를 확인하세요.
 
 <div className="guide-meta">
-**최종 확인일:** 2026-08-26  
+**최종 확인일:** 2026-11-02<br />
 **기준 버전:** 각 벤더 공식 빠른 시작 문서 최신판
 </div>

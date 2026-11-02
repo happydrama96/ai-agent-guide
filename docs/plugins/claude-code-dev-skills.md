@@ -12,8 +12,8 @@ sidebar_position: 3
 
 | 이름 | 한 줄 설명 | 난이도 | 추천도 | 활성도 | 최종 확인 |
 | --- | --- | --- | --- | --- | --- |
-| Anthropic 공식 개발 플러그인 | 리뷰, 기능 개발, Git, 보안, UI, 훅, 플러그인·SDK 개발 도구를 목적별로 설치한다. | 쉬움 | 목적별 선택 | 활발 | 2026-09-28 |
-| Superpowers | 설계부터 TDD, 디버깅, 검증, 브랜치 마무리까지 하나의 강한 개발 절차로 묶는다. | 보통 | 높음 | 활발 | 2026-09-28 |
+| Anthropic 공식 개발 플러그인 | 리뷰, 기능 개발, Git, 보안, UI, 훅, 플러그인·SDK 개발 도구를 목적별로 설치한다. | 쉬움 | 목적별 선택 | 활발 | 2026-11-02 |
+| Superpowers | 설계부터 TDD, 디버깅, 검증, 브랜치 마무리까지 하나의 강한 개발 절차로 묶는다. | 보통 | 높음 | 활발 | 2026-11-02 |
 
 이 페이지는 추천 플러그인을 늘어놓는 목록이 아닙니다. [Claude Code 플러그인](./claude-code.md)의 추천 3개는 그대로 유지하고, 여기서는 개발 목적이 정해졌을 때 어떤 공식 플러그인이나 Superpowers Skill을 찾아야 하는지 정리합니다.
 
@@ -25,15 +25,15 @@ sidebar_position: 3
 | Skill | 특정 상황에서 Claude가 따를 절차와 참고 자료 | 개인은 `~/.claude/skills/`, 프로젝트는 `.claude/skills/`, 플러그인은 `<plugin>/skills/` |
 | `CLAUDE.md` | 저장소의 빌드·테스트·코딩 규칙과 금지 사항 | 저장소에 커밋해 팀이 함께 사용 |
 
-공식 플러그인 디렉터리의 현재 기준 저장소는 [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)입니다. `anthropics/claude-code/plugins`에도 예제와 설명이 있지만, 실제 설치 이름과 배포 상태는 공식 마켓플레이스를 우선 확인합니다.
+공식 마켓플레이스의 기준 저장소는 [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)이고 설치할 때 쓰는 마켓플레이스 이름은 `claude-plugins-official`입니다. 예전 `anthropics/claude-code` 저장소의 `claude-code-plugins` 마켓플레이스는 deprecated 상태이므로, 튜토리얼에 `/plugin marketplace add anthropics/claude-code` 단계가 있으면 건너뛰고 공식 마켓플레이스에서 설치합니다. 서드파티 작성자가 제출한 플러그인은 별도의 커뮤니티 마켓플레이스(`anthropics/claude-plugins-community`, 이름 `claude-community`)에 있으며 직접 추가해야 합니다.
 
 ## Anthropic 공식 개발 플러그인
 
-> 공식 자료: [공식 마켓플레이스](https://github.com/anthropics/claude-plugins-official) · [Claude Code 저장소의 플러그인 설명](https://github.com/anthropics/claude-code/tree/main/plugins)
+> 공식 자료: [공식 마켓플레이스](https://github.com/anthropics/claude-plugins-official) · [Anthropic 마켓플레이스 안내](https://code.claude.com/docs/en/plugins/anthropic-marketplaces) · [플러그인 설치·관리](https://code.claude.com/docs/en/discover-plugins)
 
 | 구분 | 플러그인 | 하는 일 | 이럴 때는 불필요 |
 | --- | --- | --- | --- |
-| 코드 리뷰 | [`code-review`](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review) | PR을 여러 관점에서 병렬 검토하고 신뢰도가 높은 지적만 정리 | GitHub PR이 아니거나 사람이 이미 같은 기준으로 리뷰할 때 |
+| 코드 리뷰 | [`code-review`](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review) | PR을 여러 관점에서 병렬 검토하고 신뢰도가 높은 지적만 정리 | 내장 `/code-review`로 충분하거나 사람이 이미 같은 기준으로 리뷰할 때 |
 | 코드 리뷰 | [`pr-review-toolkit`](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit) | 테스트, 오류 처리, 타입 설계, 주석, 품질, 단순화를 골라 검토 | 빠른 전체 검토 한 번이면 충분할 때 |
 | 기능 개발 | [`feature-dev`](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev) | 코드 탐색, 설계, 구현, 품질 검토를 단계별 agents로 수행 | 파일 한두 개를 고치는 명확한 작업일 때 |
 | Git·PR | [`commit-commands`](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands) | 커밋, 푸시, PR 생성과 사라진 원격 브랜치 정리를 명령으로 묶음 | 팀의 기존 Git 자동화가 같은 일을 할 때 |
@@ -45,7 +45,7 @@ sidebar_position: 3
 
 ### 설치
 
-공식 마켓플레이스는 Claude Code에 기본 제공됩니다. 필요한 것만 하나씩 설치하고 새 세션에서 확인합니다.
+공식 마켓플레이스는 처음 대화형 세션을 시작할 때 자동으로 추가됩니다(조직 정책으로 막혀 있으면 `/plugin marketplace add anthropics/claude-plugins-official`). 세션 안의 `/plugin install`은 바로 설치하지 않고 상세 화면을 열어 사용자·프로젝트·로컬 설치 범위를 고르게 합니다. 필요한 것만 하나씩 설치하세요.
 
 | 명령어 | 하는 일 | 언제 쓰나 |
 | --- | --- | --- |
@@ -58,21 +58,25 @@ sidebar_position: 3
 | `/plugin install hookify@claude-plugins-official` | `hookify` 설치 | 반복되는 금지 행동을 hook으로 만들 때 |
 | `/plugin install plugin-dev@claude-plugins-official` | `plugin-dev` 설치 | Claude Code 플러그인을 제작할 때 |
 | `/plugin install agent-sdk-dev@claude-plugins-official` | `agent-sdk-dev` 설치 | Agent SDK 앱을 새로 만들 때 |
-| `/plugin` | 설치됨·검색·활성화 상태 확인 | 설치 직후 또는 플러그인이 보이지 않을 때 |
+| `claude plugin install code-review@claude-plugins-official --scope project` | 세션 없이 셸에서 설치(기본은 사용자 범위) | 설치 스크립트로 팀 저장소에 맞출 때 |
+| `/reload-plugins` | 재시작 없이 설치·변경한 플러그인 적용 | 설치 요약이 다시 불러오기를 안내할 때 |
+| `/plugin` | Discover·Installed·Marketplaces 탭에서 상태 확인 | 설치 직후 또는 플러그인이 보이지 않을 때 |
 
 ### 자주 쓰는 명령어
 
+플러그인 명령은 `/<플러그인>:<명령>` 형식으로 등록됩니다. Claude Code에는 플러그인과 별개로 내장 `/code-review`(별칭 `/review`)와 `/security-review`가 있습니다. 짧은 이름이 내장 명령과 겹치면 내장 명령이 실행되므로 아래 표는 플러그인 이름을 붙인 전체 이름으로 적었습니다.
+
 | 명령어 | 하는 일 | 언제 쓰나 |
 | --- | --- | --- |
-| `/code-review` | 현재 PR을 병렬 agents로 검토 | 의미 있는 변경이 있는 PR을 올린 뒤 |
+| `/code-review:code-review` | `code-review` 플러그인으로 현재 PR을 병렬 agents로 검토 | 의미 있는 변경이 있는 PR을 올린 뒤 |
 | `/pr-review-toolkit:review-pr all parallel` | 모든 전문 리뷰를 병렬 실행 | 병합 전에 테스트·오류·타입·품질을 함께 볼 때 |
-| `/feature-dev <기능 설명>` | 단계형 기능 개발 흐름 시작 | 코드베이스 탐색과 설계가 필요한 기능 |
-| `/commit` | 변경을 검토해 커밋 준비 | 로컬 작업을 한 커밋으로 정리할 때 |
-| `/commit-push-pr` | 커밋, 푸시, PR 준비를 연속 수행 | diff를 확인한 뒤 PR까지 만들 때 |
-| `/hookify <막거나 알릴 행동>` | 대화 요구를 hook 규칙으로 만들기 | 같은 실수가 여러 세션에서 반복될 때 |
+| `/feature-dev:feature-dev <기능 설명>` | 단계형 기능 개발 흐름 시작 | 코드베이스 탐색과 설계가 필요한 기능 |
+| `/commit-commands:commit` | 변경을 검토해 커밋 준비 | 로컬 작업을 한 커밋으로 정리할 때 |
+| `/commit-commands:commit-push-pr` | 커밋, 푸시, PR 준비를 연속 수행 | diff를 확인한 뒤 PR까지 만들 때 |
+| `/hookify:hookify <막거나 알릴 행동>` | 대화 요구를 hook 규칙으로 만들기 | 같은 실수가 여러 세션에서 반복될 때 |
 | `/hookify:list` | 생성된 hook 규칙 확인 | 자동 동작의 출처를 점검할 때 |
 | `/plugin-dev:create-plugin <설명>` | 플러그인 설계·제작·검증 흐름 시작 | commands, agents, Skills를 묶어 배포할 때 |
-| `/new-sdk-app` | Agent SDK 프로젝트 생성 안내 시작 | 새 TypeScript·Python agent 앱을 만들 때 |
+| `/agent-sdk-dev:new-sdk-app` | Agent SDK 프로젝트 생성 안내 시작 | 새 TypeScript·Python agent 앱을 만들 때 |
 
 ### 설치 전에 볼 권한과 비용
 
@@ -106,7 +110,7 @@ Superpowers는 필요한 Skill을 그때그때 고르는 느슨한 모음보다,
 | 격리 | `using-git-worktrees` | 별도 worktree와 브랜치를 만들고 깨끗한 테스트 기준선 확인 |
 | 계획 | `writing-plans` | 파일, 구현 단계, 검증 방법을 작은 작업으로 분해 |
 | 실행 | `subagent-driven-development` | 작업마다 새 subagent를 배정하고 명세·품질 리뷰 분리 |
-| 실행 | `executing-plans` | 현재 세션에서 계획을 묶음 단위로 실행하고 체크포인트 확인 |
+| 실행 | `executing-plans` | subagent 없이 현재 세션에서 계획을 실행하고 마지막에 브랜치 전체를 한 번 리뷰 |
 | 테스트 | `test-driven-development` | 실패 테스트, 최소 구현, 리팩터링 순서를 강제 |
 | 디버깅 | `systematic-debugging` | 추측성 수정을 막고 증거로 근본 원인을 좁힘 |
 | 검증 | `verification-before-completion` | 완료 주장 전에 실제 명령과 출력으로 결과 확인 |
@@ -142,14 +146,14 @@ Superpowers는 필요한 Skill을 그때그때 고르는 느슨한 모음보다,
 | 하위 디렉터리 | `<subdir>/.claude/skills/<skill-name>/SKILL.md` | 모노레포의 특정 패키지에만 적용할 때 |
 | 플러그인 | `<plugin>/skills/<skill-name>/SKILL.md` | commands, agents, hooks와 함께 배포할 때 |
 
-개인 경로의 Skill은 로컬 Claude Code에는 로드되지만 Cowork와 cloud session은 로컬 `~/.claude/skills/`를 읽지 않습니다. cloud session에도 필요하면 프로젝트 Skill을 저장소에 커밋하거나 계정에 활성화된 동기화 Skill을 사용합니다.
+개인 경로의 Skill은 로컬 Claude Code에는 로드되지만 Cowork와 cloud session은 로컬 `~/.claude/skills/`를 읽지 않습니다. cloud session에도 필요하면 프로젝트 Skill을 저장소에 커밋하거나 계정에 활성화된 동기화 Skill을 사용합니다. 반대로 claude.ai 계정으로 로그인한 로컬 터미널 세션에는 계정에서 켜 둔 Skills가 내려받아지며 `/skills`의 `claude.ai sync` 항목으로 확인할 수 있습니다. 이 기기에서 동기화를 끄려면 사용자 설정에 `syncClaudeAiSkills: false`를 둡니다.
 
 ## 추천 조합
 
 | 상황 | 먼저 설치할 것 | 이유 |
 | --- | --- | --- |
 | 개발 절차를 처음 잡음 | `superpowers` | 설계, TDD, 디버깅, 검증 순서를 하나로 제공 |
-| 기존 팀 절차는 있고 PR 리뷰만 보강 | `code-review` 또는 `pr-review-toolkit` 중 하나 | workflow 전체를 바꾸지 않고 리뷰 단계만 추가 |
+| 기존 팀 절차는 있고 PR 리뷰만 보강 | 내장 `/code-review`부터, 부족하면 `code-review` 또는 `pr-review-toolkit` 중 하나 | 설치 없이 리뷰 단계를 먼저 시험하고 필요한 관점만 추가 |
 | 큰 기능을 공식 도구만으로 진행 | `feature-dev` + `code-review` | 탐색·설계·구현과 최종 PR 리뷰의 역할을 분리 |
 | 보안 민감 코드 | `security-guidance` + 기존 SAST·리뷰 | 작업 중 보조 검토를 추가하되 기존 보안 검사를 대체하지 않음 |
 | 프론트엔드 구현 | `frontend-design` + [Playwright CLI Skills](./claude-code.md#playwright-cli--skills) | 디자인 방향과 실제 브라우저 검증을 분리 |
@@ -159,6 +163,6 @@ Superpowers는 필요한 Skill을 그때그때 고르는 느슨한 모음보다,
 처음부터 `feature-dev`와 Superpowers를 함께 켜면 둘 다 기획·설계·구현 순서를 주도할 수 있습니다. 하나로 팀 흐름을 먼저 정착시킨 뒤 부족한 단계만 추가하는 편이 판단하기 쉽습니다. `commit-commands`도 편리하지만, 자동 푸시와 PR 생성보다 diff 확인과 브랜치 정책이 먼저입니다.
 
 <div className="guide-meta">
-**최종 확인일:** 2026-09-28<br />
-**기준 버전:** Claude Code 공식 Plugins·Skills 문서 최신판 · `claude-plugins-official` 기본 브랜치 · Superpowers 기본 브랜치
+**최종 확인일:** 2026-11-02<br />
+**기준 버전:** Claude Code 2.1.316 · 공식 Plugins·Skills 문서 최신판 · `claude-plugins-official` 기본 브랜치 · Superpowers 기본 브랜치
 </div>
