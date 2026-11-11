@@ -46,6 +46,20 @@ const sidebars: SidebarsConfig = {
       label: '7. 업데이트 소식',
       items: ['updates/latest'],
     },
+    {
+      type: 'category',
+      label: '8. 에이전트 AI 총정리',
+      link: {type: 'doc', id: 'agentic-ai/index'},
+      items: [
+        'agentic-ai/concepts',
+        'agentic-ai/design-patterns',
+        'agentic-ai/frameworks',
+        'agentic-ai/build-your-first-agent',
+        'agentic-ai/evaluation-safety',
+        'agentic-ai/references',
+        'agentic-ai/trends',
+      ],
+    },
   ],
 };
 

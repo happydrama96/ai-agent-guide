@@ -64,6 +64,7 @@ const config: Config = {
       title: 'AI Agent 가이드',
       items: [
         {type: 'docSidebar', sidebarId: 'guideSidebar', position: 'left', label: '문서'},
+        {to: '/agentic-ai', position: 'left', label: '에이전트 AI'},
         {to: '/updates/latest', position: 'left', label: '업데이트'},
       ],
     },
